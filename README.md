@@ -8,7 +8,8 @@ Here is the code used to parse and quantify fitness of mutants generated from a 
 3. Compute Fitness
 
 # Dependencies
-biopython \n
+biopython
+
 pandas
 
 
