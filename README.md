@@ -5,6 +5,10 @@ Here is the code used to parse and quantify fitness of mutants generated from a 
 Raw data avaiable here:\
 Manuscript available here:
 
+To do: a few of the codes appear outdates
+- OLS from statmodels (import statsmodels.formula.api as smf to import statsmodels.api as smf)
+- reindex_axis to reindex for pandas
+
 # Dependencies
 biopython\
 pandas\
