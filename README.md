@@ -9,7 +9,7 @@ Manuscript available here:
 biopython\
 pandas\
 numpy\
-statmodels\
+statmodels
 
 
 # 1. Prep raw sequencing files
