@@ -9,6 +9,7 @@ Manuscript available here:
 biopython\
 pandas\
 numpy\
+xlrd  
 statmodels
 
 
