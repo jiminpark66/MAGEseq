@@ -1,19 +1,16 @@
 # MAGEseq
 
-Here is the code used to parse and quantify fitness of mutants generated from a MAGE-seq experiment for the manuscript X. Currently it's just a barebones demo but will be updated to be more broadly applicable. 
+Here is the code used to parse and quantify fitness values of mutants generated from a MAGE-seq experiment for the manuscript X. A demo using the raw data from the manuscript is provided.  
 
 Raw data avaiable here:\
 Manuscript available here:
 
-To do: a few of the codes appear outdates
-- OLS from statmodels (import statsmodels.formula.api as smf to import statsmodels.api as smf)
-- reindex_axis to reindex for pandas
 
 # Dependencies
 biopython\
 pandas\
 numpy\
-xlrd  
+xlrd\
 statmodels
 
 
