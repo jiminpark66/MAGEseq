@@ -4,7 +4,7 @@ import numpy as np
 import math
 import xlrd
 import statsmodels.api as sm
-import statsmodels.formula.api as smf
+import statsmodels.api as smf
 from statsmodels.tools.eval_measures import rmse
 import csv
 import math

@@ -82,7 +82,7 @@ def main(lib_name,Library,AA_start,AA_end):
 	
 	#This line changes rows and columns
 	DFF = DFF.T
-	DFF = DFF.reindex_axis(sorted(DFF.columns,reverse = True),axis = 1)
+	DFF = DFF.reindex(sorted(DFF.columns,reverse = True),axis = 1)
 	#change columns to AA number and WT codon
 
 	AA_col = []

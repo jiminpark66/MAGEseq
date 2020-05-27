@@ -6,7 +6,7 @@ from datetime import datetime
 def get_libary_region(seq_string, scores,Adapter,Adapter_spacer,Library_len):
     # first look for exact match
     Adapter_start = seq_string.find(Adapter)
-    if Adapter_start == -1:
+    if Adapter_start is -1:
         return False, '', []
     start = seq_string.find(Adapter)+len(Adapter)+Adapter_spacer
     end = start+Library_len
@@ -74,7 +74,7 @@ def main(file_name,Library,Adapter,Adapter_spacer):
     name = file_name.split(".")[0]
 
     if ".gz" in merged_reads_file:
-        handle = gzip.open("merged/" + merged_reads_file,"rt")
+        handle = gzip.open("merged\\" + merged_reads_file,"rt")
     else: 
         handle = merged_reads_file
     print("Parsing of " + merged_reads_file + " started at:" + str(datetime.now()))
