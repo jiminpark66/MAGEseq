@@ -7,21 +7,21 @@ Raw data for the manuscript can be accessed here:E-MTAB-9103 [add link]
 
 
 # Dependencies
-Python 3.X
-- biopython\
-- pandas\
-- numpy\
-- xlrd\
-- statmodels\
-SeqPrep
+- Python 3.X
+    - biopython
+    - pandas
+    - numpy 
+    - xlrd 
+    - statmodels
+- SeqPrep
 
 
-# 1. Prep raw sequencing files
-- For the demo, download all raw files from "Bin1" from the data repository. 
-    - Should consist of R1/R2 files from 9 timepoints and a WT samples. 
-    - Just download L1 samples, or alternatively download all L1-L4 samples and merge into a single fastq.
-- Pair-end merge R1/R2 files
-- create a new directory, name it "merged", and move all merged files to the new directory
+# 1. Raw file processing and other prerequisites
+The raw sequencing files should be provided as merged fastq.gz files in the "merged/" directory. For the demo, download files from samples `RpoD_MAGE_Bin1_T1` through `RpoD_MAGE_Bin1_T9` and `RpoD_MAGE_Bin1_WT` . Raw R1 and R2 files can be merged using SeqPrep as follows. 
+```
+SeqPrep -m .05 -L 30 -f R1_file.fastq.gz -r R2_file.fastq.gz -1 processed/R1_file.fastq.gz  -2 processed/R2_file.fastq.gz -3 discarded/R1_file.fastq.gz  -4 discarded/R2_file.fastq.gz  -s merged/R1_file.fastq.gz  -E pretty/R1_file.fastq.gz -x 1000
+```
+Also, file describing the sequence variants generated through MAGE is required. File should be titles `HEAD_MAGE_oligos.txt` where `HEAD` is the experiment/sample ID. For demonstration purposes `HEAD` is `Bin1`.
 
 # 2. Parse sequence variants
 - Edit the master_demo.py file with the relevant parameters
