@@ -40,7 +40,7 @@ Run `master_demo.py`.
 
 # 3. Output
 `master_demo.py` generates the `HEAD_summary.csv` that contains the following columns for each mutant/sequence variant (rows) generated from MAGE  
-- Sequence, '-' denoting positions that remain unchanged from the reference sequence
+- Sequence, `-` denoting positions that remain unchanged from the reference sequence
 - Raw counts of the each timepoint and WT reference sample
 - Mutant Position, codon sequence and amino acid
 - Relative abundance and log-transformed abundance at each time point
