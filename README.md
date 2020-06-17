@@ -1,17 +1,19 @@
 # MAGEseq
 
-Here is the code used to parse and quantify fitness values of mutants generated from a MAGE-seq experiment for the manuscript X. A demo using the raw data from the manuscript is provided.  
+MAGE-seq (Multiplexed Automated Genome Engineering) can be used to generate a saturation mutagenesis library at a genomic locus and quantify fitness of each individual mutant variants through a pooled competition experiment and sequencing. Here, we provide code and materials from the manuscript "Systematic dissection of σ70 sequence diversity and function in bacteria" [Add citation]    
 
-Raw data avaiable here:\
-Manuscript available here:
+Manuscript can be accessed here: [add link]
+Raw data for the manuscript can be accessed here:E-MTAB-9103 [add link]
 
 
 # Dependencies
-biopython\
-pandas\
-numpy\
-xlrd\
-statmodels
+Python 3.X
+- biopython\
+- pandas\
+- numpy\
+- xlrd\
+- statmodels\
+SeqPrep
 
 
 # 1. Prep raw sequencing files
