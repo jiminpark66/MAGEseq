@@ -24,7 +24,27 @@ SeqPrep -m .05 -L 30 -f R1_file.fastq.gz -r R2_file.fastq.gz -1 processed/R1_fil
 Also, file describing the sequence variants generated through MAGE is required. File should be titled `HEAD_MAGE_oligos.txt` where `HEAD` is the experiment/sample ID. For demonstration purposes `HEAD` is `Bin1`. Each line in the oligo file identifies individual oligo sequence using either `-` to denote positions that are not targeted for mutagenesis or `N` to denote positions that are targeted for mutagenesis. See the `Bin1_MAGE_oligos.txt` file provided for reference.
 
 # 2. Parse sequence variants
-- Edit the master_demo.py file with the relevant parameters
-- For the demo ("Bin1") samples, no need to change any parameters
-- Run the master_demo.py files
-    - This generates csv files of fitness, linear regression statistics, fitness landscapes (position x codon matrix), etc.
+Edit the main variables in the initial section of the `master_demo.py`
+
+Parameters    
+- Adapter: 5' upstream sequence of mutant loci to identify in each read 
+- Adapter_spacer: number of basepairs between adapter and library start
+- Library: Wildtype/Reference sequence of the loci
+- Start/End: First and last amino acid position of the library
+- dil_rate: Dilution rate of the turbidostat used to transform the log-linear regression slope
+- header: library/sample name
+- file_list: List of timepoint sample files found in the 'merged' directory. WT is required to compute a baseline sequencing miscall threshold.  
+
+For the demo, the file can be ran as provided.  
+Run `master_demo.py`.
+
+# 3. Output
+`master_demo.py` generates the `HEAD_summary.csv` that contains the following columns for each mutant/sequence variant (rows) generated from MAGE  
+- Sequence, '-' denoting positions that remain unchanged from the reference sequence
+- Raw counts of the each timepoint and WT reference sample
+- Mutant Position, codon sequence and amino acid
+- Relative abundance and log-transformed abundance at each time point
+- fitness of mutant variant
+- OLS statistics including SE, r-squared, etc. 
+
+Additionally, each statistic is written in also writted separately, in list and matrix format.
