@@ -1,4 +1,4 @@
-# MAGEseq
+# MAGE-seq
 
 MAGE-seq (Multiplexed Automated Genome Engineering) can be used to generate a saturation mutagenesis library at a genomic locus and quantify fitness of each individual mutant variants through a pooled competition experiment and sequencing. Here, we provide code and materials from the manuscript "Systematic dissection of σ70 sequence diversity and function in bacteria" [Add citation]    
 
@@ -24,9 +24,8 @@ SeqPrep -m .05 -L 30 -f R1_file.fastq.gz -r R2_file.fastq.gz -1 processed/R1_fil
 Also, file describing the sequence variants generated through MAGE is required. File should be titled `HEAD_MAGE_oligos.txt` where `HEAD` is the experiment/sample ID. For demonstration purposes `HEAD` is `Bin1`. Each line in the oligo file identifies individual oligo sequence using either `-` to denote positions that are not targeted for mutagenesis or `N` to denote positions that are targeted for mutagenesis. See the `Bin1_MAGE_oligos.txt` file provided for reference.
 
 # 2. Parse sequence variants
-Edit the main variables in the initial section of the `master_demo.py`
-
-Parameters    
+Edit the main parameters in the initial section of the `master_demo.py`
+Parameter descriptions:  
 - Adapter: 5' upstream sequence of mutant loci to identify in each read 
 - Adapter_spacer: number of basepairs between adapter and library start
 - Library: Wildtype/Reference sequence of the loci
