@@ -1,8 +1,8 @@
 # MAGE-seq
 
-MAGE-seq (Multiplexed Automated Genome Engineering) can be used to generate a saturation mutagenesis library at a genomic locus and quantify fitness of each individual mutant variants through a pooled competition experiment and sequencing. Here, we provide code and materials from the manuscript "Systematic dissection of σ70 sequence diversity and function in bacteria" [Add citation]    
+MAGE-seq (Multiplexed Automated Genome Engineering) can be used to generate a saturation mutagenesis library at a genomic locus and quantify fitness of each individual mutant variants through a pooled competition experiment and sequencing. Here, we provide code and materials from the manuscript "Systematic dissection of σ70 sequence diversity and function in bacteria" [Add citation] to quantify mutant fitness values.
 
-Manuscript can be accessed here: [add link]
+Manuscript can be accessed here: [add link]  
 Raw data for the manuscript can be accessed here:E-MTAB-9103 [add link]
 
 
